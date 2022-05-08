@@ -1,5 +1,7 @@
+import styles from '../styles/Footer.module.css';
+
 const Footer = () => {
-  return <footer>This is the footer</footer>;
+  return <footer className={styles.footer}>Made by Rawle Springer</footer>;
 };
 
 export default Footer;
