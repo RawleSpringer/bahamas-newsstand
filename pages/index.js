@@ -12,7 +12,18 @@ export default function Home() {
         <meta name="description" content="Bahamian News Aggregator" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <NewsCardList />
+      <section>
+        <h2>The Nassau Guardian</h2>
+        <NewsCardList />
+      </section>
+      <section>
+        <h2>Eyewitness News</h2>
+        <NewsCardList />
+      </section>
+      <section>
+        <h2>The Tribune</h2>
+        <NewsCardList />
+      </section>
     </NewsContainer>
   );
 }
