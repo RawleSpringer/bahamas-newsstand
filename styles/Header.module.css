@@ -2,7 +2,7 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 30px;
+  padding: 60px;
 }
 .nav ul {
   display: flex;
@@ -13,4 +13,8 @@
 
 .nav li {
   margin-right: 40px;
+}
+
+.nav li:last-child {
+  margin-right: 0px;
 }
