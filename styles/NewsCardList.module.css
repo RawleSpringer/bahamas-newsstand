@@ -1,9 +1,14 @@
 .newscard__list {
-  display: flex;
+  /* display: flex;
 
   justify-content: space-between;
   list-style-type: none;
-  padding-inline-start: 0px;
+  padding-inline-start: 0px; */
+
+  display: grid;
+  grid-auto-flow: column;
+  grid-auto-columns: 1fr;
+  gap: 10px;
 }
 
 .newscard__list li {

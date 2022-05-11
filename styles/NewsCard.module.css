@@ -5,3 +5,8 @@
 .container p {
   margin: 10px 0;
 }
+
+.container a {
+  display: inline-block;
+  margin-top: 10px;
+}

@@ -2,12 +2,12 @@ import Head from 'next/head';
 import Image from 'next/image';
 import NewsContainer from '../components/NewsContainer';
 import NewsCardList from '../components/NewsCardList';
-import { getAllNationalNews } from '../lib/scraper';
+import { getAllBusinessNews } from '../lib/scraper';
 
-export default function Home({ nationalNewsPosts }) {
-  const guardianNationalNews = nationalNewsPosts['guardian'];
-  const ewNationalNews = nationalNewsPosts['ew'];
-  const tribuneNationalNews = nationalNewsPosts['tribune'];
+export default function Business({ businessNewsPosts }) {
+  const guardianBusinessNews = businessNewsPosts['guardian'];
+  const ewBusinessNews = businessNewsPosts['ew'];
+  const tribuneBusinessNews = businessNewsPosts['tribune'];
 
   return (
     <NewsContainer>
@@ -19,26 +19,26 @@ export default function Home({ nationalNewsPosts }) {
       <section>
         <h2>The Nassau Guardian</h2>
         <NewsCardList
-          newsArticles={guardianNationalNews}
+          newsArticles={guardianBusinessNews}
           newspaper="guardian"
         />
       </section>
       <section>
         <h2>Eyewitness News</h2>
-        <NewsCardList newsArticles={ewNationalNews} newspaper="ew" />
+        <NewsCardList newsArticles={ewBusinessNews} newspaper="ew" />
       </section>
       <section>
         <h2>The Tribune</h2>
-        <NewsCardList newsArticles={tribuneNationalNews} newspaper="tribune" />
+        <NewsCardList newsArticles={tribuneBusinessNews} newspaper="tribune" />
       </section>
     </NewsContainer>
   );
 }
 
 export async function getStaticProps() {
-  const nationalNewsPosts = await getAllNationalNews();
+  const businessNewsPosts = await getAllBusinessNews();
 
   return {
-    props: { nationalNewsPosts },
+    props: { businessNewsPosts },
   };
 }
