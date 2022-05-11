@@ -1,6 +1,11 @@
 .newscard__list {
   display: flex;
+
   justify-content: space-between;
   list-style-type: none;
   padding-inline-start: 0px;
+}
+
+.newscard__list li {
+  flex-basis: 200px;
 }

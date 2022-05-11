@@ -1,3 +1,7 @@
 .container div {
   border: solid 1px blue;
 }
+
+.container p {
+  margin: 10px 0;
+}
