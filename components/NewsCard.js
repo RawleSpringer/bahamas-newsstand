@@ -1,5 +1,5 @@
 import styles from '../styles/NewsCard.module.css';
-import GuardianImg from './GuardianLogo';
+import NewsPaperLogo from './NewsPaperLogo';
 import EWImg from './EWLogo';
 import TribuneImg from './TribuneLogo';
 
@@ -7,9 +7,13 @@ const NewsCard = ({ article, newspaper }) => {
   return (
     <article className={styles.container}>
       <div>
-        {newspaper === 'guardian' && <GuardianImg />}
-        {newspaper === 'ew' && <EWImg />}
-        {newspaper === 'tribune' && <TribuneImg />}
+        {article.image === 'noImage' ? (
+          <NewsPaperLogo newspaper={newspaper} />
+        ) : (
+          <div height="150px" width="200px">
+            <img src={article.image} width="100%" height="100%" />
+          </div>
+        )}
       </div>
       {newspaper === 'guardian' && (
         <a
